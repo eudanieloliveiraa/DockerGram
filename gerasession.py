@@ -1,9 +1,11 @@
 from pyrogram import Client
+from os import getenv
+from dotenv import load_dotenv
 
-api_id = 26842599
-api_hash = "62d75c03edec207bb78f0fa5bbf74984"
-bot_token = "6340619689:AAGllQOLspGK0gJYfW9IKtJyxFqhixUmQiY"
+load_dotenv()
 
-app = Client("my_account", api_id=api_id, api_hash=api_hash)
+phone = "+5598981071821"
+
+app = Client(phone, phone_number=phone, api_id=getenv('api_id'), api_hash=getenv('api_hash'))
 
 app.run()
