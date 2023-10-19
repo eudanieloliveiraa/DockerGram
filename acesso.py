@@ -1,4 +1,11 @@
 from pyrogram import Client
 
-app = Client("my_account")
-app.run()
+app = Client("+5598981071821")
+
+async def main():
+    await app.start()
+    await app.send_message("me", "Hi!")
+    await app.stop()
+
+
+app.run(main())
